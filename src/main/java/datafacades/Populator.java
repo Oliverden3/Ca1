@@ -28,7 +28,7 @@ public class Populator {
         AddressFacade af = AddressFacade.getAddressFacade(emf);
 //
         Address address = new Address("nisseland","jul",new Cityinfo(4000,1000,"Kbh"));
-        pf.create(new Person(1,"anders@meinicke.dk","Anders","Meinicke",address));
+        //pf.create(new Person(1,"anders@meinicke.dk","Anders","Meinicke",address));
         pf.create(new Person(2,"emil@meinicke.dk","emil","Meinicke",address));
 
 
