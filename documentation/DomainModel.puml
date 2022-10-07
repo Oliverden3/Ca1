@@ -1,0 +1,72 @@
+@startuml
+'https://plantuml.com/class-diagram
+package personalInfo{
+class Person{
+int id
+String firstName
+String lastName
+String username
+String password
+Arraylist<Hobby> hobbies
+Arraylist<Person> friends
+Adresse addrese
+Phone phoneNumber
+removeHobby()
+addHobby()
+}
+class Phone{
+int number
+}
+class Address{
+String Street
+String AdditionalInfo
+
+}
+
+class CityInfo{
+int zipCode
+String city
+}
+}
+package SocialFeatures{
+abstract class Hobby{
+string Name
+string Description
+Arraylist<Person>
+--
+get()
+set()
+}
+class FriendFinder{
+findSimilarPeople()
+
+}
+interface Chat{
+makeCall()
+}
+class FriendChat
+{
+}
+class HobbyChat{
+}
+}
+
+
+class Login{
+loginToPerson()
+}
+class Logout{
+logoutOffPerson()
+}
+Hobby }|..|{ Person
+Person ||--|{ Phone
+Person }|--|| Address
+Address }|--|| CityInfo
+Login --> Person
+Person --> Logout
+Person }|--|| FriendFinder
+Person "2.." --- FriendChat
+Hobby "1.." --- HobbyChat
+Chat --> HobbyChat
+Chat --> FriendChat
+@enduml

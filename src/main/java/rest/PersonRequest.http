@@ -1,0 +1,67 @@
+GET http://localhost:8080/ca1_application_war_exploded/api/xxx
+
+
+###
+GET http://localhost:8080/ca1_application_war_exploded/api/person/all
+Accept: application/json
+
+###
+GET http://localhost:8080/ca1_application_war_exploded/api/address
+Accept: application/json
+
+###
+GET http://localhost:8080/rest_snippets_war_exploded/api/person/2
+Accept: application/json
+
+###
+GET http://localhost:8080/rest_snippets_war_exploded/api/person/99999999
+Accept: application/json
+
+###
+POST https://cphcn332.dk/ca1_application/api/person/addperson
+Content-Type: application/json
+
+{
+  "email": "TEST@test.dk",
+  "firstName": "test",
+  "lastName": "test",
+  "address": {
+    "id": 3,
+    "address": "test-addresse",
+    "additionalInfo": "test",
+    "cityInfo": {
+      "id": 12,
+      "zipcode": "2150",
+      "city": "Randers"
+    }
+  },
+  "hobbies": [
+    {
+      "id": 2,
+      "description": "Fitten"
+    }
+  ],
+  "phones": [
+    {
+      "number": 91169136,
+      "description": "iphone"
+    }
+  ]
+}
+
+###
+###POST http://localhost:8080/ca1_application_war_exploded/api/address
+###Content-Type: application/json
+
+###{"address": "gunarvej", "additionalInfo": "ingen"}
+###
+
+PUT http://localhost:8080/ca1_application_war_exploded/api/person/33
+Content-Type: application/json
+
+{"email": "adolf@dk.dk","firstName": "Adolf","lastName": "Martin"}
+
+###
+DELETE http://localhost:8080/ca1_application_war_exploded/api/person/33
+Content-Type: application/json
+
